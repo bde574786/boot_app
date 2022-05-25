@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Main Activity"
+        android:textSize="20dp" />
+
+    <!--  xml 파일에서 플래그먼트를 사용하는 법
+        반드시 ID 값을 지정해주어야 한다.
+        name 속성에 어떤 프래그먼트를 사용할지 선언해야함
+    -->
+
+    <fragment
+        android:id="@+id/fragmentOne"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:name="com.example.myfragment.FragmentOne"/>
+
+
+</LinearLayout>
