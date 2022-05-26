@@ -43,9 +43,9 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClicked(View view, int position) {
                 // 여기가 호출되어 진다
                 Log.d("TAG", "넘겨 받은 positon : " + position);
-//                Intent intent = new Intent(getApplication(), DetailActivity.class);
-//                intent.putExtra("obj", Food.getSampleData().get(position));
-//                startActivity(intent);
+                Intent intent = new Intent(getApplication(), DetailActivity.class);
+                intent.putExtra("obj", Food.getSampleData().get(position));
+                startActivity(intent);
             }
         });
 
