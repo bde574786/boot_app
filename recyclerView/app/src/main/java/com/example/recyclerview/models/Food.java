@@ -19,6 +19,16 @@ public class Food implements Serializable {
         this.detail = detail;
     }
 
+    @Override
+    public String toString() {
+        return "Food{" +
+                "thumbnail='" + thumbnail + '\'' +
+                ", title='" + title + '\'' +
+                ", subTitle='" + subTitle + '\'' +
+                ", detail='" + detail + '\'' +
+                '}';
+    }
+
     public String getThumbnail() {
         return thumbnail;
     }
