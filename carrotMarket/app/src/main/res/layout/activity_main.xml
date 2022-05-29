@@ -89,10 +89,11 @@
                         android:id="@+id/cat"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
+                        android:background=""
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="15dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/cat"
+                        android:src="@drawable/twitty"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent">
 
@@ -108,7 +109,7 @@
                         android:clipToOutline="true"
                         android:scaleType="centerInside"
                         android:src="@drawable/ic_baseline_camera_alt_24"
-                        android:tint="@color/white"
+                        android:tint="@color/black"
                         app:layout_constraintBottom_toBottomOf="@+id/cat"
                         app:layout_constraintStart_toEndOf="@+id/cat">
 
