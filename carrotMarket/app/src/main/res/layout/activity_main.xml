@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_weight="3"
-        android:background="@color/white"
+        android:background="@drawable/seperated_line_top"
         app:layout_constraintBottom_toTopOf="@id/scrollView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -516,7 +516,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:background="@drawable/seperated_line"
+            android:background="@drawable/seperated_line_bottom"
             android:id="@+id/menu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
