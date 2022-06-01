@@ -53,17 +53,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private void addEventListener() {
-        btn1.setOnClickListener(view -> {
-            service.post(10).enqueue(new Callback<ResponsePostDto>() {
-                @Override
-                public void onResponse(Call<ResponsePostDto> call, Response<ResponsePostDto> response) {
-                    if (response.isSuccessful()) {
-                        // 자동 파싱 json ==> object로 변환 처리
-                        ResponsePostDto dto = response.body();
-                        Log.d(TAG, dto + "");
-                    }
-                }
+                private void addEventListener() {
+                    btn1.setOnClickListener(view -> {
+                        service.post(10).enqueue(new Callback<ResponsePostDto>() {
+                            @Override
+                            public void onResponse(Call<ResponsePostDto> call, Response<ResponsePostDto> response) {
+                                if (response.isSuccessful()) {
+                                    // 자동 파싱 json ==> object로 변환 처리
+                                    ResponsePostDto dto = response.body();
+                                    Log.d(TAG, dto + "");
+                                }
+                            }
 
                 @Override
                 public void onFailure(Call<ResponsePostDto> call, Throwable t) {
@@ -128,6 +128,7 @@ public class MainActivity extends AppCompatActivity {
             });
         });
 
+
         btn5.setOnClickListener(view -> {
             service.deletePost(1).enqueue(new Callback<Void>() {
                 @Override
@@ -143,6 +144,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
         });
+
 
         btn6.setOnClickListener(view -> {
             Log.d("TAG", "btn6 click");

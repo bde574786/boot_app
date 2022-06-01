@@ -36,7 +36,7 @@ public interface JPHService {
 
     // https://jsonplaceholder.typicode.com/posts/{posts}
     // HTTP 메세지 body 부분에 데이터를 넣어서 서버에 전달한다.. (MIME TYPE : json)
-    // 우리의 데이터가 잘 전달되었다면 서버측에서는ㄴ 응답 값을 보내준다.
+    // 우리의 데이터가 잘 전달되었다면 서버측에서는 응답 값을 보내준다.
     // 값을 보낼 때 어떻게 데이터를 보낼지 설계해야 한다.
     @POST("posts")
     Call<ResponsePostDto> createPost(@Body ReqPostDto reqPostDto);

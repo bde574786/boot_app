@@ -21,7 +21,6 @@ public class Student {
             this.name = name;
             return this;
         }
-
         public MyBuilder setGrade(int grade) {
             this.grade = grade;
             return this;

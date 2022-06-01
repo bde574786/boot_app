@@ -17,7 +17,7 @@ public class ResponsePostDto {
     public String body;
 
     @Override
-    public String toString() {
+    public    String toString() {
         return "ResponsePostDto{" +
                 "userId=" + userId +
                 ", id=" + id +
