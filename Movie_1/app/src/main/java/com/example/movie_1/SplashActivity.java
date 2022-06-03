@@ -20,6 +20,7 @@ public class SplashActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_splash);
 
+
         getWindow().setFlags(
                 WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN
@@ -28,19 +29,19 @@ public class SplashActivity extends AppCompatActivity {
         TextView textView = findViewById(R.id.splashTextView);
         // 애니메이션
         Animation slideAnimation = AnimationUtils.loadAnimation(this, R.anim.slide_side);
-       textView.startAnimation(slideAnimation);
+        textView.startAnimation(slideAnimation);
 
 
-       new Handler().postDelayed(new Runnable() {
-           @Override
-           public void run() {
-               Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-               startActivity(intent);
-               // splshActivity --> MainActivity
-               finish();
-               //MainActivity
-           }
-       }, 1500);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+                // splshActivity --> MainActivity
+                finish();
+                //MainActivity
+            }
+        }, 1500);
 
 
     }
