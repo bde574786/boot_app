@@ -1,26 +1,31 @@
 package com.example.project;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
-import android.content.ClipData;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
-import android.widget.TableLayout;
 
-import com.example.project.adapter.Adapter;
-import com.example.project.databinding.ActivityMainBinding;
+import com.example.project.adapter.FragmentAdapter;
 import com.google.android.material.tabs.TabLayout;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
 //    private ActivityMainBinding binding;
 
+    public static Context context;
     public static final int TAB_COUNT = 4;
-    private static final String TAB_NAME[] = {"전체 메뉴 보기", "카테고리 별 보기", "가까운 가게 보기", "정보 수정"};
+    private static final String TAB_NAME[] = {"카테고리 별 보기", "전체 메뉴 보기", "가까운 가게 보기", "정보 수정"};
     private TabLayout tabLayout;
     private ViewPager viewPager;
-    private Adapter adapter;
+    private FragmentAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         chain();
     }
 
+    /////////////////////////////////////////////////////////////
     // 초기화
     private void init() {
         viewPager = findViewById(R.id.viewPager);
@@ -44,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         for (String name : TAB_NAME) {
             tabLayout.addTab(tabLayout.newTab().setText(name));
         }
-        adapter = new Adapter(getSupportFragmentManager(), TAB_COUNT);
+        adapter = new FragmentAdapter(getSupportFragmentManager(), TAB_COUNT);
     }
 
     // 이벤트 리스너

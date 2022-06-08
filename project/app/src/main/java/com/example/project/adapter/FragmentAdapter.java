@@ -11,9 +11,9 @@ import com.example.project.Fragment3;
 import com.example.project.Fragment4;
 import com.example.project.MainActivity;
 
-public class Adapter extends FragmentPagerAdapter {
+public class FragmentAdapter extends FragmentPagerAdapter {
 
-    public Adapter(@NonNull FragmentManager fm, int behavior) {
+    public FragmentAdapter(@NonNull FragmentManager fm, int behavior) {
         super(fm, behavior);
     }
 
