@@ -58,10 +58,10 @@ public class MainActivity extends AppCompatActivity {
         // 2. LayoutManager 생성해서 Adapter 클래스와 연결해야 한다.
 
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
-//        recyclerView.setAdapter(new FoodAdapter(Food.getSampleData(), this));
+        recyclerView.setAdapter(new FoodAdapter(Food.getSampleData(), this));
         recyclerView.setAdapter(foodAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-//        recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
+        recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
         recyclerView.hasFixedSize(); // 성능개선
     }
 }

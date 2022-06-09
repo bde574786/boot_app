@@ -21,7 +21,6 @@
 
 
 
-
     <androidx.viewpager.widget.ViewPager
         android:background="#ff9f45"
         android:id="@+id/viewPager"
